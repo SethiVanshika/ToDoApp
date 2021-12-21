@@ -1,0 +1,221 @@
+body{
+    background: #0f0f0f;
+    padding:80px 0 0 0;
+  }
+  
+  
+  body,input,button{
+    font-family:'Roboto', sans-serif;
+  }
+  
+  
+  header{
+    width:100%;
+    height: 80px;
+    position: fixed;
+    top:0;
+    left: 0;
+    padding: 15px;
+    z-index: 5;
+    background: #06b300;
+    box-shadow: 0px 2px 4px rgba(44,62,80,0.15);
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+  
+  
+  header input{
+    width:100%;
+    height: 50px;
+    float: left;
+    color: #fff;
+    font-size:15px;
+    font-weight:400;
+    text-indent: 18px;
+    padding-right: 55px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 5px;
+    border: 0px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    outline:none;
+  }
+  header button{
+    width:50px;
+    height:50px;
+    position: absolute;
+    top:15px;
+    right: 15px;
+    z-index:2;
+    border-radius: 25px;
+    box-shadow:none;
+    background-color: #fff;
+    border:0px;
+    cursor:pointer;
+  }
+  header button svg{
+    width:16px;
+    height:16px;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    margin:-8px 0 0 -8px;
+  }
+  
+  
+  header button svg .fill{
+    fill: #67f744;
+  }
+  
+  
+  .container{
+    width:100%;
+    float:left;
+    padding:15px;
+  }
+  
+  
+  ul.subject{
+    width: 100%;
+    float: left;
+  }
+  
+  
+  ul.subject li{
+    width:100%;
+    min-height: 50px;
+    float:left;
+    font-size: 14px;
+    font-weight: 500;
+    color: #444;
+    line-height: 22px;
+    background: #fff;
+    border-radius: 5px;
+    position: relative;
+    padding:14px 100px 14px 14px;
+    box-shadow:0px 1px 2px rgba(44,62,80,0.10);
+    margin-bottom:10px;
+  
+  }
+  
+  
+  ul.subject li:last-of-type{
+    margin:0;
+  }
+  
+  
+  ul.subject li .buttons{
+    width:100px;
+    height: 50px;
+    position:absolute;
+    top:0;
+    right: 0;
+  }
+  
+  
+  ul.subject li .buttons button{
+    width: 50px;
+    height: 50px;
+    float: left;
+    position: relative;
+    background:none;
+    border:0px;
+    box-shadow:none;
+    outline:none;
+    cursor: pointer;
+  }
+  
+  
+  ul.subject li .buttons button:last-of-type:before{
+    content:'';
+    width: 1px;
+    height: 30px;
+    position: absolute;
+    top:10px;
+    left: 0;
+    background:#edf0f1;
+  }
+  
+  
+  ul.subject li .buttons button svg{
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    margin:-11px 0 0 -11px;
+  }
+  
+  
+  .remove .fill{
+    fill: #c0cecb;
+  }
+  
+  
+  .complete .fill{
+    fill: #90fd5d;
+  }
+  
+  
+  button.complete svg{
+    border:1.5px solid #97f772;
+    border-radius: 11px;
+  
+  }
+  
+  
+  ul.subject#complete li .buttons button.complete svg{
+    background:#90f172;
+    border:0px;
+  }
+  
+  
+  ul.subject:not(#complete) li .buttons button.complete:hover svg{
+    background:rgba(135, 253, 88, 0.75);
+    border:none;
+  }
+  
+  
+  ul.subject:not(#complete) button.complete:hover .fill{
+    fill:#fff;
+  }
+  
+  
+  ul.subject#complete button.complete .fill{
+    fill: #fff;
+  }
+  button.remove:hover .fill{
+    fill:#98e956;
+  }
+  #complete{
+    position: relative;
+    padding:60px 0 0 0;
+  }
+  #complete:before{
+    content: '';
+    width: 150px;
+    height: 1px;
+    background: #fffdfd;
+    position: absolute;
+    top:30px;
+    left: 50%;
+    margin: 0 0 0 -75px;
+  }
+  
+  #complete:empty:after{
+    content: 'You have yet to complete';
+  }
+  
+  #subject:empty:after{
+    content: 'Hurrah! All Completed';
+    margin:15px 0 0 0;
+  }
+  
+  #subject:after,
+  #complete::after{
+    width: 100%;
+    display: block;
+    text-align: center;
+    font-size: 12px;
+    color: rgb(250, 145, 85);
+  }
